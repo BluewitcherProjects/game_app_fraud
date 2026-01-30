@@ -665,26 +665,28 @@ class PaymentController extends Controller
 
             \Log::info('WatchPay IPN Received', ['params' => $params]);
 
-            $amount = $params['amount'] ?? null;
-            $mchId = $params['mchId'] ?? null;
-            $mchOrderNo = $params['mchOrderNo'] ?? $params['mch_order_no'] ?? null;
-            $merRetMsg = $params['merRetMsg'] ?? '';
-            $orderDate = $params['orderDate'] ?? null;
-            $orderNo = $params['orderNo'] ?? null;
-            $oriAmount = $params['oriAmount'] ?? null;
-            $tradeResult = $params['tradeResult'] ?? null;
             $sign = $params['sign'] ?? null;
+            $mchOrderNo = $params['mchOrderNo'] ?? $params['mch_order_no'] ?? null;
+            $tradeResult = $params['tradeResult'] ?? null;
 
-            // Build signature string for verification
-            $signStr = "";
-            $signStr = $signStr."amount=".$amount."&";
-            $signStr = $signStr."mchId=".$mchId."&";
-            $signStr = $signStr."mchOrderNo=".$mchOrderNo."&";
-            $signStr = $signStr."merRetMsg=".$merRetMsg."&";
-            $signStr = $signStr."orderDate=".$orderDate."&";
-            $signStr = $signStr."orderNo=".$orderNo."&";
-            $signStr = $signStr."oriAmount=".$oriAmount."&";
-            $signStr = $signStr."tradeResult=".$tradeResult;
+            // Build signature string from all params except sign and signType, alphabetically sorted
+            $signParams = [];
+            foreach ($params as $key => $value) {
+                if ($key === 'sign' || $key === 'signType' || $key === 'sign_type') {
+                    continue;
+                }
+                if ($value !== '' && $value !== null) {
+                    $signParams[$key] = $value;
+                }
+            }
+            ksort($signParams);
+            $signStr = '';
+            foreach ($signParams as $key => $value) {
+                if ($signStr !== '') {
+                    $signStr .= '&';
+                }
+                $signStr .= $key . '=' . $value;
+            }
 
             // Get merchant key for verification
             $gateway = Gateway::where('alias','Qepay')->first();
@@ -692,6 +694,7 @@ class PaymentController extends Controller
 
             // Verify signature
             $expectedSign = $this->sign($signStr, $merchant_key);
+            \Log::info('WatchPay IPN Signature Check', ['signStr' => $signStr, 'expectedSign' => $expectedSign, 'receivedSign' => $sign]);
             if($sign !== $expectedSign){
                 echo "Signature error";
                 return;
