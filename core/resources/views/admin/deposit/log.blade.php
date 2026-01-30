@@ -114,10 +114,14 @@
                                         <br>{{ diffForHumans($deposit->created_at) }}
                                     </td>
                                     <td data-label="@lang('User')">
-                                        <span class="font-weight-bold">{{ $deposit->user->fullname }}</span>
+                                        <span class="font-weight-bold">{{ $deposit->user->fullname ?? 'Deleted User' }}</span>
                                         <br>
                                         <span class="small">
+                                    @if($deposit->user)
                                     <a href="{{ route('admin.users.detail', $deposit->user_id) }}"><span>@</span>{{ $deposit->user->username }}</a>
+                                    @else
+                                    N/A
+                                    @endif
                                     </span>
 
                                         @if($deposit->status == 2)

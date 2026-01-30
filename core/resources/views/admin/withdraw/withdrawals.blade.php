@@ -63,9 +63,15 @@
                                 </td>
 
                                 <td data-label="@lang('User')">
-                                    <span class="font-weight-bold">{{ $withdraw->user->fullname }}</span>
+                                    <span class="font-weight-bold">{{ $withdraw->user->fullname ?? 'Deleted User' }}</span>
                                     <br>
-                                    <span class="small"> <a href="{{ route('admin.users.detail', $withdraw->user_id) }}"><span>@</span>{{ $withdraw->user->username }}</a> </span>
+                                    <span class="small">
+                                    @if($withdraw->user)
+                                    <a href="{{ route('admin.users.detail', $withdraw->user_id) }}"><span>@</span>{{ $withdraw->user->username }}</a>
+                                    @else
+                                    N/A
+                                    @endif
+                                    </span>
                                 </td>
 
 
