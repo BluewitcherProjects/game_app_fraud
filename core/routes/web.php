@@ -448,6 +448,7 @@ Route::post('shpay/ipn', 'Gateway\PaymentController@shpayipn')->name('shpay');
 Route::post('flutterwave/ipn', 'Gateway\PaymentController@flutterwaveipn')->name('flutterwaveipn');
 Route::post('shpay/withdraw/ipn', 'Gateway\PaymentController@shpaywithdrawipn')->name('shpaywithdrawipn');
 Route::post('shpay/withdraw', 'Gateway\PaymentController@shpaywithdraw');
+Route::get('shpay/return', 'Gateway\PaymentController@shpayReturn')->name('shpay.return');
 Route::post('shpay/query/transfer', 'Gateway\PaymentController@queryTransfer')->name('shpay.query.transfer');
 Route::get('shpay/query/balance', 'Gateway\PaymentController@queryBalance')->name('shpay.query.balance');
 Route::get('/cron', 'CronController@cron')->name('cron');

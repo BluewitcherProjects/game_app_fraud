@@ -1047,6 +1047,11 @@ class PaymentController extends Controller
         return response()->json(json_decode($response, true));
     }
 
+    public function shpayReturn()
+    {
+        return response('<html><head><script>window.top.location.href="'.route('user.deposit.history').'";</script></head><body>Redirecting...</body></html>')->header('X-Frame-Options', 'ALLOWALL');
+    }
+
     public static function sign($signSource,$key) {
         if (!empty($key)) {
              $signSource = $signSource."&key=".$key;
