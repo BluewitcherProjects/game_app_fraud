@@ -19,7 +19,7 @@ class ProcessController extends Controller
 
         $version = "1.0";
         $notify_url = route('shpay');
-        $page_url = route('shpay.return');
+        $page_url = url('/payment-return.php');
         $mch_order_no = $deposit->trx;
         $pay_type = "101";
         $trade_amount = "" . round($deposit->final_amo, 2) . "";
