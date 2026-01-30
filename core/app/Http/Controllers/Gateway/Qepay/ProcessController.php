@@ -22,7 +22,7 @@ class ProcessController extends Controller
         $page_url = url('/payment-return.php');
         $mch_order_no = $deposit->trx;
         $pay_type = "101";
-        $trade_amount = "" . round($deposit->final_amo, 2) . "";
+        $trade_amount = number_format($deposit->final_amo, 2, '.', '');
         $order_date = Carbon::now()->format('Y-m-d H:i:s');
         $bank_code = "";
         $goods_name = "plan";

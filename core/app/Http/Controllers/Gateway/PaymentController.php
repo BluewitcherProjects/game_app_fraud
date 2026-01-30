@@ -548,7 +548,7 @@ class PaymentController extends Controller
         $pay_type = "".$request->gateway."";
         
     
-        $trade_amount = "". $request->amount ."";
+        $trade_amount = number_format($request->amount, 2, '.', '');
     
         $order_date = "". $time."";
     
@@ -658,12 +658,16 @@ class PaymentController extends Controller
     
     public function shpayipn(Request $request)
     {
-            $jsonData = $request->getContent();
-            parse_str($jsonData, $params);
+            $params = $request->all();
+            if (empty($params)) {
+                $params = $request->json()->all();
+            }
+
+            \Log::info('WatchPay IPN Received', ['params' => $params]);
 
             $amount = $params['amount'] ?? null;
             $mchId = $params['mchId'] ?? null;
-            $mchOrderNo = $params['mchOrderNo'] ?? null;
+            $mchOrderNo = $params['mchOrderNo'] ?? $params['mch_order_no'] ?? null;
             $merRetMsg = $params['merRetMsg'] ?? '';
             $orderDate = $params['orderDate'] ?? null;
             $orderNo = $params['orderNo'] ?? null;
