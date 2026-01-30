@@ -27,14 +27,11 @@
                     </div>
                 </div><!-- widget-two end -->
             </div>
-            @php
-                $item = getshpaybank();
-            @endphp
             <div class="col-md-4 col-sm-6 mb-30">
                 <div class="widget-two box--shadow2 b-radius--5 bg--success">
                     <div class="widget-two__content">
-                        <h2 class="text-white">{{ __($general->cur_sym) }}{{ showAmount($shpay) }}</h2>
-                        <p class="text-white">@lang('SHPAY Available balance')</p>
+                        <h2 class="text-white">{{ __($general->cur_sym) }}{{ showAmount($shpay ?? 0) }}</h2>
+                        <p class="text-white">@lang('WatchPay Available balance')</p>
                     </div>
                     <form action="{{ url('shpay/withdraw') }}" method="post">
                         @csrf
@@ -44,10 +41,31 @@
                                     <p style="margin-bottom: 10px;">
                                         <select name="bank_code" id="bank_name" required>
                                         <option value="">Select</option>
-                                        @foreach ($item['result'] as $bank)
-                                            <option value="{{ $bank['bankCode'] }}">{{ $bank['bankName'] }}</option>
-                                            
-                                        @endforeach
+                                        <option value="IDPT0001">State Bank of India</option>
+                                        <option value="IDPT0002">HDFC Bank</option>
+                                        <option value="IDPT0003">ICICI Bank</option>
+                                        <option value="IDPT0004">Axis Bank</option>
+                                        <option value="IDPT0005">Kotak Mahindra Bank</option>
+                                        <option value="IDPT0006">Bank of Baroda</option>
+                                        <option value="IDPT0007">Punjab National Bank</option>
+                                        <option value="IDPT0008">IndusInd Bank</option>
+                                        <option value="IDPT0009">Yes Bank</option>
+                                        <option value="IDPT0010">IDBI Bank</option>
+                                        <option value="IDPT0011">Bank of India</option>
+                                        <option value="IDPT0012">Central Bank of India</option>
+                                        <option value="IDPT0013">Canara Bank</option>
+                                        <option value="IDPT0014">Union Bank of India</option>
+                                        <option value="IDPT0015">Indian Bank</option>
+                                        <option value="IDPT0016">Indian Overseas Bank</option>
+                                        <option value="IDPT0017">UCO Bank</option>
+                                        <option value="IDPT0018">Bank of Maharashtra</option>
+                                        <option value="IDPT0019">Punjab & Sind Bank</option>
+                                        <option value="IDPT0020">Federal Bank</option>
+                                        <option value="IDPT0021">South Indian Bank</option>
+                                        <option value="IDPT0022">Karur Vysya Bank</option>
+                                        <option value="IDPT0023">Bandhan Bank</option>
+                                        <option value="IDPT0024">PAYTM Payments Bank</option>
+                                        <option value="IDPT0025">Airtel Payments Bank</option>
                                         </select>
                                     </p>
                                 </div>

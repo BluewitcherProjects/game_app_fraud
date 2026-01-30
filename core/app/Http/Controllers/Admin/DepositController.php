@@ -52,47 +52,36 @@ class DepositController extends Controller
 
     public function deposit()
     {
-        $gateway = Gateway::where('alias','Shpay')->first();
-
         try {
-                //shpay balance
-                $ref = getTrx();
-                $date = date("Y-m-d H:i:s");
-                $mchid = json_decode($gateway->gateway_parameters)->mchtId->value;
-                $appid = json_decode($gateway->gateway_parameters)->appId->value;
-                $key = json_decode($gateway->gateway_parameters)->key->value;
+                $gateway = Gateway::where('alias','Qepay')->first();
+                if ($gateway) {
+                    $mch_id = json_decode($gateway->gateway_parameters)->mchtId->value;
+                    $merchant_key = json_decode($gateway->gateway_parameters)->depositKey->value;
 
-                $p = array(
-                    "mchtId" => $mchid,
-                    "appId" => $appid,
-                    "requestTime" => "$date",
-                    "signType" => "MD5",
-                );
+                    $signStr = "mch_id=".$mch_id;
+                    $signStr .= "&key=".$merchant_key;
+                    $sign = md5($signStr);
 
-                ksort($p);
-                $string = '';
-                foreach($p as $oneKey=>$oneValue)
-                $string .= $oneKey ."=". $oneValue."&";
-                $string_without_last_and = substr($string, 0, -1);
-                $digest = $string_without_last_and .$key;
-                $sign = strtoupper(md5($digest));
+                    $ch = curl_init();
+                    curl_setopt($ch, CURLOPT_URL, "https://api.watchglb.com/query/balance");
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+                    curl_setopt($ch, CURLOPT_POST, true);
+                    curl_setopt($ch, CURLOPT_HEADER, false);
+                    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
+                        'mch_id' => $mch_id,
+                        'sign_type' => 'MD5',
+                        'sign' => $sign,
+                    ]));
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                    $response = curl_exec($ch);
+                    curl_close($ch);
 
-                $url = "https://transapi.shpays.com/v1/trans/appAvailableAmt?appId={$appid}&mchtId={$mchid}&requestTime={$date}&signType=MD5&sign={$sign}";
-                // Make the API request
-                $response = Http::get($url);
-
-                // You can process the response as needed (e.g., convert JSON to array)
-                $responseData = json_decode($response, true);
-                try {
-                    if (!$responseData) {
-                        $shpay = 0;
-                    }else{
-                        $shpay = $responseData['result']['availableAmt'];
-                    }
-                } catch (\Throwable $th) {
+                    $responseData = json_decode($response, true);
+                    $shpay = $responseData['availableAmount'] ?? 0;
+                } else {
                     $shpay = 0;
                 }
-                //shpay end
         } catch (\Throwable $th) {
                 $shpay = 0;
         }
