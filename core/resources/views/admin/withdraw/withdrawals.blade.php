@@ -63,7 +63,7 @@
                                 </td>
 
                                 <td data-label="@lang('User')">
-                                    <span class="font-weight-bold">{{ $withdraw->user->fullname ?? 'Deleted User' }}</span>
+                                    <span class="font-weight-bold">{{ optional($withdraw->user)->fullname ?? 'Deleted User' }}</span>
                                     <br>
                                     <span class="small">
                                     @if($withdraw->user)
@@ -109,7 +109,7 @@
                                         <br> Bank Name - {{ $withdraw->user->bankAccount->bank_name }}
                                     @endif
 
-                                    @if(!$withdraw->method->is_bank && $withdraw->user->wallet_address != "")
+                                    @if($withdraw->user && !$withdraw->method->is_bank && $withdraw->user->wallet_address != "")
                                         <hr>
                                         <span>{{ $withdraw->user->wallet_address }}</span>
                                     @endif

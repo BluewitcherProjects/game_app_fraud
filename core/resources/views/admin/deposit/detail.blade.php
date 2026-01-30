@@ -20,7 +20,11 @@
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             @lang('Username')
                             <span class="font-weight-bold">
-                                <a href="{{ route('admin.users.detail', $deposit->user_id) }}">{{ @$deposit->user->username }}</a>
+                                @if($deposit->user)
+                                <a href="{{ route('admin.users.detail', $deposit->user_id) }}">{{ $deposit->user->username }}</a>
+                                @else
+                                Deleted User
+                                @endif
                             </span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">

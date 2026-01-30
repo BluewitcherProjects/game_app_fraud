@@ -55,9 +55,15 @@
                                 </td>
 
                                 <td data-label="@lang('User')">
-                                    <span class="font-weight-bold">{{ $withdraw->user->fullname }}</span>
+                                    <span class="font-weight-bold">{{ optional($withdraw->user)->fullname ?? 'Deleted User' }}</span>
                                     <br>
-                                    <span class="small"> <a href="{{ route('admin.users.detail', $withdraw->user_id) }}"><span>@</span>{{ $withdraw->user->username }}</a> </span>
+                                    <span class="small">
+                                    @if($withdraw->user)
+                                    <a href="{{ route('admin.users.detail', $withdraw->user_id) }}"><span>@</span>{{ $withdraw->user->username }}</a>
+                                    @else
+                                    N/A
+                                    @endif
+                                    </span>
                                 </td>
 
 
@@ -90,12 +96,12 @@
                                         @endforeach
                                     @endif
 
-                                    @if($withdraw->method->is_bank && $withdraw->user->bankAccount)
+                                    @if($withdraw->user && $withdraw->method->is_bank && $withdraw->user->bankAccount)
                                         Account Name - {{ $withdraw->user->bankAccount->account_name }} <br> Account Number - {{ $withdraw->user->bankAccount->account_number }}
                                         <br> Bank Name - {{ $withdraw->user->bankAccount->bank_name }}
                                     @endif
 
-                                    @if(!$withdraw->method->is_bank && $withdraw->user->wallet_address != "")
+                                    @if($withdraw->user && !$withdraw->method->is_bank && $withdraw->user->wallet_address != "")
                                         <hr>
                                         <span>{{ $withdraw->user->wallet_address }}</span>
                                     @endif
