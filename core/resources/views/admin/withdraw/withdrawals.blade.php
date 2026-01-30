@@ -104,7 +104,7 @@
                                         @endforeach
                                     @endif
 
-                                    @if($withdraw->method->is_bank && $withdraw->user->bankAccount)
+                                    @if($withdraw->user && $withdraw->method->is_bank && $withdraw->user->bankAccount)
                                         Account Name - {{ $withdraw->user->bankAccount->account_name }} <br> Account Number - {{ $withdraw->user->bankAccount->account_number }}
                                         <br> Bank Name - {{ $withdraw->user->bankAccount->bank_name }}
                                     @endif

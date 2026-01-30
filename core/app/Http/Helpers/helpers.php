@@ -1065,58 +1065,11 @@ function get_bank_name($code){
 
 
 function getshpaybank() {
-    // Define the URL for fetching banks list
-    $gateway = Gateway::where('alias','Shpay')->first();
-
-    $url = 'https://transapi.shpays.com/v1/trans/payBanks';
-    $date = date("Y-m-d H:i:s");
-    $mchid = json_decode($gateway->gateway_parameters)->mchtId->value;
-    $appid = json_decode($gateway->gateway_parameters)->appId->value;
-    $key = json_decode($gateway->gateway_parameters)->key->value;
-
-
-        $p = array(
-        'countryCode' => 'NG',
-        'requestTime' => $date,
-        'signType' => 'MD5',
-        'mchtId' => $mchid,
-        'appId' => $appid,
-        );
-
-        ksort($p);
-        $string = '';
-        foreach($p as $oneKey=>$oneValue)
-        $string .= $oneKey ."=". $oneValue."&";
-        $string_without_last_and = substr($string, 0, -1);
-        $digest = $string_without_last_and .$key;
-        $sign = strtoupper(md5($digest));
-
-
-        // Define query parameters
-        $params = [
-            'appId' => $appid,
-            'countryCode' => 'NG',
-            'mchtId' => $mchid,
-            'requestTime' => $date,
-            'sign' => $sign,
-            'signType' => 'MD5',
-
-        ];
-
-        // Sending GET request with the parameters
-        $response = Http::get($url, $params);
-
-        // Checking if the request was successful
-        if ($response->successful()) {
-            // Parsing the response JSON
-            $banks = $response->json();
-
-            // Returning the list of banks
-            return $banks;
-        } else {
-            // Returning an error message if the request failed
-            return response()->json(['error' => 'Failed to retrieve banks'], $response->status());
-        }
+    $gateway = Gateway::where('alias','Qepay')->first();
+    if (!$gateway) {
+        return [];
+    }
+    return [];
 }
 
 function getAllBanks(){
