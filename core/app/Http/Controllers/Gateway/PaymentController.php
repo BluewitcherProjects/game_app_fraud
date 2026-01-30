@@ -695,7 +695,7 @@ class PaymentController extends Controller
 
             if($tradeResult == '1')
             {
-                $deposit = Deposit::where('trx',$mchOrderNo)->where('status',2)->first();
+                $deposit = Deposit::where('trx',$mchOrderNo)->whereIn('status',[0,2])->first();
                 if(!$deposit){
                     echo "success";
                     return;
@@ -718,7 +718,7 @@ class PaymentController extends Controller
                 $transaction->save();
             }
             else{
-                $deposit = Deposit::where('trx',$mchOrderNo)->where('status',2)->first();
+                $deposit = Deposit::where('trx',$mchOrderNo)->whereIn('status',[0,2])->first();
                 if($deposit){
                     $deposit->status = 3;
                     $deposit->save();
