@@ -80,11 +80,11 @@ class PaymentController extends Controller
             }*/
 
 
-            $pend = Deposit::where('user_id', $user->id)->where('status', '2')->first();
+            /*$pend = Deposit::where('user_id', $user->id)->where('status', '2')->first();
             if ($pend) {
                 $notify[] = ['error', 'You currently have a pending deposit, please wait for confirmation or cancellation and try again'];
                 return back()->withNotify($notify);
-            }
+            }*/
 
             $charge = $gate->fixed_charge + ($request->amount * $gate->percent_charge / 100);
             $payable = $request->amount + $charge;
@@ -139,11 +139,11 @@ class PaymentController extends Controller
             }*/
 
 
-            $pend = Deposit::where('user_id', $user->id)->where('status', '2')->first();
+            /*$pend = Deposit::where('user_id', $user->id)->where('status', '2')->first();
             if ($pend) {
                 $notify[] = ['error', 'You currently have a pending deposit, please wait for confirmation or cancellation and try again'];
                 return back()->withNotify($notify);
-            }
+            }*/
 
             $charge = $gate->fixed_charge + ($request->amount * $gate->percent_charge / 100);
             $payable = $request->amount + $charge;
