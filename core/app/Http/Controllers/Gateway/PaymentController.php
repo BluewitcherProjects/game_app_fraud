@@ -210,7 +210,7 @@ class PaymentController extends Controller
             return redirect()->route(gatewayRedirectUrl())->withNotify($notify);
         }
         if (isset($data->redirect)) {
-            return redirect($data->redirect_url);
+            return response()->view('redirect_payment', ['url' => $data->redirect_url]);
         }
 
         // for Stripe V3
