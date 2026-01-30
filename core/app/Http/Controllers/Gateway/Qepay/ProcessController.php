@@ -59,6 +59,7 @@ class ProcessController extends Controller
             'pay_type' => $pay_type,
             'trade_amount' => $trade_amount,
             'version' => $version,
+            'page_url' => $page_url,
             'sign_type' => $sign_type,
             'sign' => $sign,
         );
