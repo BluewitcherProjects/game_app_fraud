@@ -1,0 +1,2402 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+}
+
+body {
+    background: #090909;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.bg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    max-width: 640px;
+}
+
+.bg img {
+    width: 100%;
+    float: left;
+}
+
+.shop_top {
+    width: 100%;
+    height: 2.5rem;
+    margin: 1rem 0;
+    padding-left: 4%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.shop_top .logo {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 3rem;
+    margin-right: 0;
+}
+
+.shop_top h4 {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin-left: 0.5rem;
+    color: #fff;
+}
+
+.shop_top a {
+    height: 2rem;
+    display: inline-block;
+    line-height: 2rem;
+    font-size: 14px;
+    background: linear-gradient(0deg, #ffe1b5 0%, #fffdfd 100%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0.25rem;
+    right: 0;
+    padding: 0 0.75rem;
+    border-radius: 1rem 0 0 1rem;
+    color: #ff7e00;
+    font-weight: bold;
+}
+
+.shop_top img {
+    height: 1.25rem;
+    margin-right: 0.5rem;
+}
+
+.shop_banner {
+    width: 92%;
+    height: 13rem;
+    margin: 1rem 4%;
+}
+
+.shop_banner img {
+    width: 100%;
+    height: 13rem;
+    border-radius: 0.25rem;
+    object-fit: cover;
+}
+
+.shop_notice {
+    width: 92%;
+    height: 2.5rem;
+    margin: 1rem 4%;
+    background: #232323;
+    border-radius: 0.25rem;
+}
+
+.shop_notice li {
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 0.5rem;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.shop_notice li img {
+    height: 2rem;
+    flex-shrink: 0;
+}
+
+.shop_notice li p {
+    width: 100%;
+    font-size: 14px;
+    margin-left: 0.75rem;
+    color: #999;
+}
+
+.shop_money {
+    width: 92%;
+    margin: 1rem 4%;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+    background: linear-gradient(0deg, #ffffff 0%, #ffffff 100%);
+    border: 2px solid #5b3ffb;
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop_money .left {
+    width: 50%;
+    height: 6.5rem;
+    padding: 1.25rem 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.shop_money .left h1 {
+    font-size: 28px;
+    color: #fff;
+}
+
+.shop_money .left h1 span {
+    font-size: 14px;
+    margin-right: 0.25rem;
+}
+
+.shop_money .left p {
+    width: 100%;
+    font-size: 14px;
+    color: #888;
+}
+
+.shop_money .right {
+    width: 50%;
+    height: 6.5rem;
+}
+
+.shop_money .right .top {
+    width: 100%;
+    height: 3rem;
+    padding-left: 2.5rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.shop_money .right .top h4 {
+    font-size: 15px;
+}
+
+.shop_money .right .top p {
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 12px;
+    color: #888;
+}
+
+.shop_money .right .top span {
+    width: 1rem;
+    height: 1rem;
+    background: url(../img/n1.png) no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 0.75rem;
+    border-radius: 50px;
+}
+
+.shop_money .right .bot {
+    width: 100%;
+    height: 3rem;
+    padding-left: 2.5rem;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 0.5rem;
+}
+
+.shop_money .right .bot h4 {
+    font-size: 16px;
+}
+
+.shop_money .right .bot p {
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 12px;
+    color: #888;
+}
+
+.shop_money .right .bot span {
+    width: 1rem;
+    height: 1rem;
+    background: url(../img/n2.png) no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 0.75rem;
+    border-radius: 50px;
+}
+
+.shop_ad {
+    width: 92%;
+    margin: 1rem 4%;
+}
+
+.shop_ad img {
+    width: 100%;
+}
+
+.shop_list_tab {
+    width: 92%;
+    margin: 1rem;
+    height: 2.5rem;
+    padding: 0 1px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop_list_tab p {
+    width: 50%;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 1px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.shop_list_tab p.action {
+    background: #232323;
+    border-radius: 2.5rem;
+    color: #fff;
+}
+
+.shop_lists {
+    width: 92%;
+    margin: 1rem 4%;
+}
+
+.shop_lists ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.shop_lists li {
+    width: 48%;
+    padding: 3rem 1rem 1rem 1rem;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.shop_lists li img {
+    width: 9.25rem;
+    height: 6.25rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.shop_lists li .tag {
+    height: 1.25rem;
+    line-height: 1.15rem;
+    background: linear-gradient(243deg, #5b3ffb 5%, #3471ec 100%);
+    color: #fff;
+    display: inline-block;
+    padding: 0 0.75rem;
+    font-size: 12px;
+    border-radius: 2.5rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.shop_lists li h4 {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 14px;
+    color: #333;
+}
+
+.shop_lists li p {
+    width: 100%;
+    height: 1.5rem;
+    background: linear-gradient(243deg, #5b3ffb 5%, #3471ec 100%);
+    margin-top: 0.75rem;
+    border-radius: 3rem;
+    padding: 0 1px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop_lists li p span {
+    width: 50%;
+    height: 22px;
+    margin-top: 1px;
+    line-height: 22px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
+.shop_lists li p span.action {
+    background: #fff;
+    color: #333;
+}
+
+.lose {
+    filter: grayscale(100%);
+}
+
+.footer {
+    width: 100%;
+    height: 5rem;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background: #090909;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+}
+
+footer li {
+    width: 20%;
+    height: 50px;
+    float: left;
+    filter: grayscale(100%);
+}
+
+footer li img {
+    height: 24px;
+    display: block;
+    margin: 4px auto 2px;
+}
+
+footer li p {
+    width: 100%;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #ff3434;
+}
+
+footer li:nth-child(3) img {
+    height: 48px;
+    margin-top: -20px;
+    padding: 4px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 50px;
+}
+
+footer li.action {
+    filter: grayscale(0%) !important;
+}
+
+.notice_popou_musk {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.notice_popou {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background: #232323;
+    background-size: 100%;
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid #fff !important;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 5.2rem;
+}
+
+.notice_popu_text {
+    width: 100%;
+    height: 220px;
+    padding: 0 0.75rem;
+    box-sizing: border-box;
+    overflow: scroll;
+}
+
+.notice_popu_text p {
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.2rem;
+    color: #fff;
+    /*margin-bottom: 0.5rem;*/
+}
+
+.notice_popou button {
+    width: 100%;
+    height: 2.2rem;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    background: transparent;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 0;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    height: 44px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 4%;
+    box-sizing: border-box;
+    background: #090909;
+    z-index: 99;
+}
+
+header img:nth-child(1) {
+    position: absolute;
+    top: 12px;
+    left: 4%;
+    height: 20px;
+    z-index: 9;
+}
+
+header p {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+header img:nth-child(3) {
+    right: 4%;
+    height: 20px;
+    top: 12px;
+    position: absolute;
+    z-index: 9;
+}
+
+.header {
+    width: 100%;
+    height: 44px;
+}
+
+.pay_center {
+    width: 92%;
+    margin: 1rem 4%;
+    background: #232323;
+    background-size: cover;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.pay_center_to {
+    width: 100%;
+    background: #232323;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+}
+
+.pay_center_to h4 {
+    font-size: 14px;
+    width: 100%;
+}
+
+.pay_center_to ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pay_center_to ul li {
+    width: 31%;
+    background: #090909;
+    color: #fff;
+    margin-top: 1rem;
+    height: 2rem;
+    font-size: 14px;
+    line-height: 2rem;
+    border-radius: 0.25rem;
+    text-align: center;
+}
+
+.pay_center_to .inputs {
+    width: 100%;
+    height: 3rem;
+    background: #090909;
+    margin-top: 1rem;
+}
+
+.pay_center_to .inputs input {
+    width: 100%;
+    height: 3rem;
+    background: transparent;
+    border: none;
+    padding-left: 1rem;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #fff;
+}
+
+.pay_lis {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    line-height: 2rem;
+    padding: 0 0.75rem;
+    box-sizing: border-box;
+    background: #000;
+    color: #fff;
+    margin-top: 1rem;
+    font-size: 13px;
+    border-radius: 0.25rem;
+}
+
+.pay_lis img {
+    height: 1rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.pay_lis.action {
+    background: #76b900;
+    color: #fff;
+}
+
+.pay_lis.action img {
+    display: block;
+}
+
+.pay_center_to button {
+    width: 60%;
+    height: 2.5rem;
+    background: #76b900;
+    margin: 1.75rem auto 1rem;
+    display: block;
+    border: none;
+    font-size: 16px;
+    border-radius: 0.5rem;
+    color: #fff;
+}
+
+.pay_center_tips {
+    background: #232323;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+
+.pay_center_tips h4 {
+    font-size: 14px;
+    width: 100%;
+}
+
+.pay_center_tips .text {
+    width: 100%;
+    line-height: 1.5rem;
+    font-size: 13px;
+    color: #999;
+    margin-top: 1rem;
+}
+
+.pay_log_list {
+    width: 92%;
+    margin: 1rem 4%;
+    background: #fff;
+    border-radius: 0.5rem;
+}
+
+.pay_log_list li {
+    padding: 1.25rem 1rem;
+    box-sizing: border-box;
+    border-bottom: 1px #f5f5f5 solid;
+    position: relative;
+}
+
+.pay_log_list li:last-child {
+    border: none;
+}
+
+.pay_log_list li h4 {
+    width: 100%;
+
+    font-size: 16px;
+}
+
+.pay_log_list li p {
+    width: 100%;
+    font-size: 12px;
+    margin-top: 0.5rem;
+    color: #999;
+    overflow: hidden;
+}
+
+.pay_log_list li p.wws {
+    color: red;
+}
+
+.pay_log_list li span {
+    position: absolute;
+    top: 1.25rem;
+    right: 1rem;
+    font-weight: bold;
+    color: rgb(255, 170, 0);
+}
+
+.goods_list {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.goods_money {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+
+.goods_money .lis {
+    width: 50%;
+}
+
+.goods_money .lis h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.goods_money .lis p {
+    font-size: 13px;
+    color: #888;
+    width: 100%;
+    text-align: center;
+}
+
+.goods_lists li {
+    width: 100%;
+    height: 9.5rem;
+    border: 1px solid #fff;
+    background: #232323;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.goods_lists li img {
+    height: 7rem;
+    width: 7rem;
+    margin-top: 1.5rem;
+    flex-shrink: 0;
+}
+
+.goods_lists li .text {
+    width: 95%;
+    height: 7rem;
+    margin-top: 1rem;
+    margin-left: 0.6rem;
+}
+
+.goods_lists li .text h4 {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 14px;
+}
+
+.goods_lists li .text p {
+    font-size: 12px;
+    /*height: 1.25rem;*/
+    line-height: 1.25rem;
+}
+
+.goods_lists li span.tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5rem;
+    background: linear-gradient(to right, #188560, #0f7d58);
+    padding: 0 0.75rem;
+    font-size: 13px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0.35rem 0 0.5rem 0;
+    line-height: 1.5rem;
+}
+
+.goods_lists li span.money {
+    height: 1.5rem;
+    background: linear-gradient(to right, #188560, #0f7d58);
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 14px;
+    padding: 0 1rem;
+    border-radius: 2rem;
+}
+
+.goods_info_top {
+    width: 92%;
+    background: #232323;
+    margin: 1rem 4%;
+    display: flex;
+    justify-content: flex-start;
+    height: 13rem;
+    padding: 1.5rem 1rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.goods_info_top img {
+    height: 7.5rem;
+    border: 1px #333 solid;
+    border-radius: 0.5rem;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+
+.goods_info_top .text {
+    width: 100%;
+}
+
+.goods_info_top .text h4 {
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 14px;
+    font-weight: normal;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.goods_info_top .text h4 span {
+    height: 1.5rem;
+    background: linear-gradient(0deg, #da6d42 0%, #e59840 100%);
+    color: #fff;
+    font-weight: bold;
+    padding: 0 0.5rem;
+    border-radius: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 12px;
+    margin-right: 0.25rem;
+}
+
+.goods_info_top .text h2 {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 22px;
+    margin: 0.5rem 0;
+}
+
+.goods_info_top .text h2 span {
+    font-size: 16px;
+    margin-right: 0.25rem;
+}
+
+.goods_info_top .text p {
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.goods_info_top .text p span {
+    color: #ebab40;
+}
+
+.goods_info_top .tips {
+    width: 100%;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0rem;
+    padding: 0 1rem;
+    font-size: 12px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.goods_info_top .tips span {
+    color: #895100;
+}
+
+.goods_info_btn {
+    width: 92%;
+    margin: 1rem 4%;
+    display: flex;
+    justify-content: space-between;
+    height: 2.5rem;
+}
+
+.goods_info_btn a {
+    width: 45%;
+    text-align: center;
+    line-height: 2.5rem;
+    font-size: 14px;
+    border-radius: 2.5rem;
+    height: 2.5rem;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right, #76b900, #76b900);
+    display: block;
+}
+
+.goods_info_moneys {
+    width: 92%;
+    height: 8rem;
+    background: #faf1e2;
+    margin: 1rem 4%;
+    border-radius: 0.5rem;
+}
+
+.goods_info_moneys h4 {
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    background: #3471ec;
+    color: #fff;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.goods_info_moneys ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.goods_info_moneys li {
+    width: 50%;
+    height: 5.5rem;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-right: 1px #ccc solid;
+}
+
+.goods_info_moneys li:nth-child(2) {
+    border: none;
+}
+
+.goods_info_moneys h3 {
+    width: 100%;
+    text-align: center;
+    color: #87411f;
+}
+
+.goods_info_moneys p {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 0.5rem;
+    color: ;
+}
+
+.goods_info_moneyor {
+    width: 92%;
+    padding: 1rem;
+    margin: 1rem 4%;
+    box-sizing: border-box;
+    background: #23223;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+}
+
+.goods_info_moneyor .title {
+    width: 100%;
+    height: 34px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.goods_info_moneyor .title span {
+    width: 100%;
+    height: 2px;
+    background: #000;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+}
+
+.goods_info_moneyor .title p {
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    position: relative;
+    z-index: 9;
+    font-size: 16px;
+    padding: 0 0.5rem;
+    color: #fff;
+}
+
+.goods_info_moneyor ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.goods_info_moneyor li h4 {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    color: #87411f;
+}
+
+.goods_info_moneyor li p {
+    width: 100%;
+    font-size: 13px;
+    color: #999;
+    margin-top: 0.5rem;
+}
+
+.goods_info_moneyor .tips {
+    width: 100%;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    height: 2rem;
+    line-height: 2rem;
+    color: #fff;
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(0deg, #da6d42 0%, #e59840 100%);
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+.goods_info_moneyor .text {
+    font-size: 14px;
+    color: #999;
+}
+
+.goods_info_moneyor .text p {
+    margin-top: 0.75rem;
+}
+
+.goods_info_popou_musk {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.goods_info_popou_center {
+    width: 92%;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin: 5rem 4%;
+    background: #fff;
+    border-radius: 0.5rem;
+    border: 1px #da6d42 solid;
+    box-sizing: border-box;
+}
+
+.goods_info_popou_center h4 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.goods_info_popou_center .text {
+    max-height: 15rem;
+    overflow: scroll;
+}
+
+.goods_info_popou_center P {
+    width: 100%;
+    line-height: 1.5rem;
+    font-size: 14px;
+    color-interpolation-filters: #999;
+}
+
+.goods_info_popou_center .text p {
+    margin-bottom: 0.5rem;
+    color: #999;
+}
+
+.goods_info_popou_center P span {
+    margin-left: 0.25rem;
+    color: #da6d42;
+}
+
+.goods_info_popou_center .btn {
+    width: 100%;
+    height: 2.5rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.goods_info_popou_center .btn a {
+    width: 48%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: 2.5rem;
+    font-size: 14px;
+    color: #fff;
+}
+
+.goods_info_popou_center .btn a:nth-child(1) {
+    width: 25%;
+    background: #bbb;
+}
+
+.goods_info_popou_center .btn a:nth-child(2) {
+    width: 70%;
+    background: #da6d42;
+}
+
+.pay_center_tos {
+    width: 100%;
+    height: 13rem;
+    background: url(../img/a2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.pay_center_tos h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #895100;
+    font-size: 40px;
+}
+
+.pay_center_tos h1 span {
+    font-size: 14px;
+    font-weight: normal;
+    margin-right: 0.25rem;
+    color: #333;
+}
+
+.pay_center_tos p {
+    width: 60%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    background: red;
+    text-align: center;
+    font-size: 14px;
+    margin: 0.75rem auto 1.25rem;
+    background: linear-gradient(0deg, #ffecb2 0%, #ffecb3 100%);
+    color: #333;
+    border-radius: 1.5rem;
+}
+
+.pay_center_tos a {
+    width: 70%;
+    height: 2rem;
+    line-height: 2rem;
+    display: block;
+    margin: 0 auto;
+    background: red;
+    text-align: center;
+    border-radius: 2rem;
+    font-size: 14px;
+    background: linear-gradient(0deg, #da6d42 0%, #e59840 100%);
+    color: #fff;
+    font-weight: bold;
+}
+
+.pay_center_rk {
+    width: 100%;
+    padding: 3.25rem 0.75rem 0.75rem;
+    background: #fff;
+    margin: 1rem 0;
+    box-sizing: border-box;
+    border-radius: 2rem 2rem 0.5rem 0.5rem;
+    position: relative;
+}
+
+.pay_center_rk h4.title {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    font-weight: normal;
+    font-size: 15px;
+    background: rgb(16, 107, 138);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.pay_center_rk ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.pay_center_rk li {
+    width: 20%;
+    height: 7rem;
+    position: relative;
+}
+
+.pay_center_rk li h4 {
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 2rem;
+    color: #333;
+}
+
+.pay_center_rk li p {
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 14px;
+    text-align: center;
+    color: #999;
+}
+
+.pay_center_rk li:nth-child(2) {
+    width: 60%;
+}
+
+.pay_center_rk li:nth-child(2) .money {
+    width: 7rem;
+    height: 7rem;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 6.5rem;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px #895100 dashed;
+    border-radius: 7rem;
+    color: #895100;
+    box-sizing: border-box;
+}
+
+.pay_center_rk li:nth-child(2) span {
+    width: 80%;
+    height: 2rem;
+    background: red;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 10%;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 2rem;
+    line-height: 2rem;
+    color: #895100;
+    background: #ebab40;
+}
+
+.pay_center_rk .btn {
+    width: 100%;
+    height: 2rem;
+    margin: 2.5rem 0 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pay_center_rk .btn a {
+    width: 45%;
+    height: 2rem;
+    background: #ebab40;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 2rem;
+    border-radius: 2rem;
+}
+
+.pay_center_rk .btn a:nth-child(1) {
+    border: 1px #ebab40 solid;
+    line-height: 30px;
+    box-sizing: border-box;
+    background: #fff;
+    color: #333;
+}
+
+.right_btn {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    background: yellow;
+    position: fixed;
+    top: 1rem;
+    right: 0;
+    z-index: 100;
+    font-size: 14px;
+    padding: 0 0.75rem 0 1rem;
+    border-radius: 1.5rem 0 0 1.5rem;
+    color: #ff7e00;
+    background: linear-gradient(0deg, #ffe1b5 0%, #fffdfd 100%);
+}
+
+.pay_center .reg_list {
+    width: 100%;
+    background: #fff;
+    padding: 0;
+}
+
+.pay_center .reg_list p {
+    width: 100%;
+    height: 2.5rem;
+    background: #fff;
+    border-bottom: 1px #f5f5f5 solid;
+}
+
+.pay_center .reg_list p span {
+    width: 33.33%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.pay_center .reg_list p span:nth-child(2) {
+    color: #00b578;
+    font-weight: bold;
+}
+
+.pay_center .reg_list p:nth-child(1) {
+    background: linear-gradient(to right, #76b900, #76b900);
+    caret-color: #fff;
+    border-radius: 0.5rem 0.5rem 0 0;
+    border-bottom: none;
+}
+
+.pay_center .reg_list p:nth-child(1) span {
+    color: #fff;
+}
+
+.pay_center .reg_list p:last-child {
+    border-bottom: none;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.ekip_top {
+    width: 92%;
+    height: 6.5rem;
+    margin: 1rem 4% 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ekip_top .left {
+    width: 50%;
+    height: 6.5rem;
+}
+
+.ekip_top .left p {
+    width: 100%;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    font-size: 13px;
+    color: #fff;
+}
+
+.ekip_top .left h4 {
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 16px;
+    color: #fff;
+}
+
+.ekip_top .left a {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    background: #35a3b3;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 14px;
+    padding: 0 1.5rem;
+    border-radius: 1rem;
+}
+
+.ekip_top .right {
+    width: 50%;
+    height: 6.5rem;
+    padding: 0rem 0;
+    box-sizing: border-box;
+}
+
+.ekip_top .right p {
+    width: 100%;
+    height: 1.5rem;
+    background: linear-gradient(0deg, #ff4800 0%, #ff7e00 100%);
+    padding: 0 1px;
+    box-sizing: border-box;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ekip_top .right span:nth-child(1) {
+    background: #fff;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    display: inline-block;
+    padding: 0 0.5rem;
+    border-radius: 2rem;
+    margin-top: 1px;
+    flex-shrink: 0;
+}
+
+.ekip_top .right span:nth-child(2) {
+    text-align: center;
+    height: 1.5rem;
+    width: 100%;
+    line-height: 1.5rem;
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+}
+
+.ekip_top .right p:nth-child(2) {
+    margin-top: 1rem;
+}
+
+.ekip_top .right p:nth-child(3) {
+    margin-top: 1rem;
+}
+
+.ekip_link {
+    width: 92%;
+    font-size: 13px;
+    margin: 1rem 4%;
+    color: #fff;
+}
+
+.ekip_nav_list {
+    width: 100%;
+    height: 4rem;
+}
+
+.ekip_nav_list ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ekip_nav_list li {
+    width: 48%;
+    height: 4rem;
+}
+
+.ekip_nav_list li img {
+    width: 100%;
+    height: 4rem;
+    object-fit: cover;
+}
+
+.ekip_vip_list li {
+    width: 100%;
+    height: 7rem;
+    background: #fff;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    border: 1px solid #b49c5a;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.ekip_vip_list li img {
+    height: 4rem;
+    margin-top: 0.5rem;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+}
+
+.ekip_vip_list li .text {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.ekip_vip_list li .text .lis {
+    width: 50%;
+    height: 3rem;
+}
+
+.ekip_vip_list li .text .lis h4 {
+    width: 100%;
+    text-align: center;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    color: #87411f;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.ekip_vip_list li .text .lis p {
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+.ekip_vip_list li .text span {
+    width: 100%;
+    display: block;
+    background: #ebb65d;
+    color: #fff;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    margin-top: 0.5rem;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+.pay_center .team_money {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.pay_center .team_money .lis {
+    width: 50%;
+    height: 3.5rem;
+}
+
+.pay_center .team_money .lis p {
+    width: 100%;
+    font-size: 12px;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    overflow: hidden;
+    text-align: center;
+    color: #999;
+}
+
+.pay_center .team_money .lis h4 {
+    font-size: 16px;
+    text-align: center;
+    height: 2rem;
+    line-height: 2rem;
+    color: #fff;
+}
+
+.pay_center .team_money .lis:nth-child(2) h4 {
+    color: #fff;
+}
+
+.team_tab {
+    width: 100%;
+    height: 2rem;
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.team_tab p {
+    width: 30%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 14px;
+    border: 1px solid #f3c430;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+.team_tab p:nth-child(2) {
+    border: 1px #f3c430 solid;
+    color: #fff;
+}
+
+.team_tab p:nth-child(3) {
+    border: 1px solid #f3c430;
+    color: #fff;
+}
+
+.team_tab p:nth-child(1).action {
+    background: #f3c430;
+    color: #fff;
+}
+
+.team_tab p:nth-child(2).action {
+    background: #f3c430;
+    color: #fff;
+}
+
+.team_tab p:nth-child(3).action {
+    background: #f3c430;
+    color: #fff;
+}
+
+.my_top h4 span {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 12px;
+    display: inline-block;
+    padding: 0 0.5rem;
+    border-radius: 1.5rem;
+    color: #fff;
+    background-image: linear-gradient(to right, #188560, #0f7d58);
+}
+
+.my_top .right {
+    height: 2.5rem;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+}
+
+.my_top .right img {
+    height: 1.2rem;
+    float: left;
+    margin-top: 0.65rem;
+    margin-left: 0.5rem;
+}
+
+.my_moneys {
+    width: 92%;
+    height: 3.5rem;
+    margin: 2rem 4%;
+    position: relative;
+}
+
+.my_moneys h4 {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 22px;
+    color: #fff;
+}
+
+.my_moneys h4 span {
+    font-size: 16px;
+}
+
+.my_moneys p {
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 14px;
+    color: #fff;
+}
+
+.my_moneys .btn {
+    height: 2rem;
+    position: absolute;
+    top: 0.75rem;
+    right: 0;
+}
+
+.my_moneys .btn a {
+    height: 2rem;
+    font-size: 12px;
+    line-height: 2rem;
+    background: #000;
+    padding: 0 0.75rem;
+    border-radius: 2rem;
+    color: #fff;
+    margin-top: 0;
+    margin-left: 0.5rem;
+    color: rgb(255 255 255);
+    background-image: linear-gradient(243deg, #5b3ffb 5%, #3471ec 100%);
+    display: inline-block;
+}
+.pay_center_tom {
+    position: relative;
+}
+.pay_center_tom h4 {
+    width: 80%;
+    font-size: 16px;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.pay_center_tom p {
+    width: 60%;
+    line-height: 1.5rem;
+    font-size: 13px;
+    color: #999;
+    margin-top: 0.5rem;
+}
+.pay_center_tom a {
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    padding: 0 1rem;
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    background: linear-gradient(0deg, #da6d42 0%, #e59840 100%);
+    border-radius: 2.5rem;
+}
+.my_center_list {
+    width: 100%;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+.my_center_list li {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px #ccc solid;
+}
+.my_center_list li img {
+    height: 1.5rem;
+    margin-top: 0.75rem;
+}
+.my_center_list li p {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 14px;
+    margin-left: 0.75rem;
+    color: #fff;
+}
+.my_center_list li:last-child {
+    border-bottom: none;
+}
+.servisi_box {
+    width: 100%;
+    margin: 1.5rem 0;
+}
+.servisi_box h2 {
+    width: 100%;
+    font-size: 28px;
+    text-align: center;
+}
+.servisi_box img {
+    width: 66%;
+    margin: 1rem 17%;
+}
+.servisi_box p {
+    width: 80%;
+    line-height: 1.25rem;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    margin-left: 10%;
+    color: rgb(78, 41, 0);
+}
+.servisi_boxs {
+    width: 92%;
+    padding: 1rem 0.5rem;
+    box-sizing: border-box;
+    margin: 1rem 4%;
+    border-radius: 0.5rem;
+    border: 1px rgb(239, 170, 115) solid;
+    background: #fff;
+}
+.servisi_boxs img {
+    height: 3rem;
+    display: block;
+    margin: 0 auto 1rem;
+}
+.servisi_boxs li {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px #000 dashed;
+    margin-top: 0.5rem;
+}
+.servisi_boxs li p {
+    font-size: 12px;
+    height: 2rem;
+    line-height: 2rem;
+}
+.servisi_boxs li p span {
+    color: blue;
+}
+.servisi_boxs li a {
+    height: 1.5rem;
+    background: rgb(239, 170, 115);
+    line-height: 1.5rem;
+    padding: 0 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 12px;
+    margin-top: 0.25rem;
+    color: #fff;
+}
+.withdrawal_money {
+    width: 99%;
+    height: 7rem;
+    margin: 1rem 2% 0;
+    background: #232323;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 1.75rem 31% 2rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.withdrawal_money h2 {
+    width: 100%;
+    color: #fff;
+}
+.withdrawal_money p {
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+}
+.pay_center_to .inputs input::placeholder {
+    font-size: 14px;
+}
+.pay_center_to .wws {
+    margin-top: 1rem;
+    font-size: 13px;
+    text-align: right;
+}
+.pay_center_to .wws a {
+    color: red;
+    margin-left: 0.25rem;
+    color: rgb(219, 124, 13);
+}
+.bank_list {
+    width: 92%;
+    margin: 0 4%;
+}
+.bank_list li {
+    width: 100%;
+    background: #f9673f;
+    padding: 0rem 0.5rem 1rem;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+.bank_list li h4 {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 15px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px #f5f5f5 solid;
+}
+.bank_list li h4 img {
+    height: 1.5rem;
+    margin-top: 0.75rem;
+}
+.bank_list li p {
+    font-size: 13px;
+    margin-top: 0.5rem;
+    color: #fff;
+    line-height: 1.5rem;
+}
+.add_bank_form {
+    width: 92%;
+    margin: 1rem 4%;
+}
+.add_bank_form .inputs {
+    width: 100%;
+    height: 3rem;
+    background: #fff;
+    color: #333;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+.add_bank_form .inputs p {
+    width: 25%;
+    font-size: 14px;
+    text-align: center;
+    line-height: 3rem;
+    height: 3rem;
+    background: #f5ebd0;
+    color: #333;
+    border-radius: 0.5rem 0 0 0.5rem;
+    flex-shrink: 0;
+}
+.add_bank_form .inputs input {
+    width: 75%;
+    height: 3rem;
+    line-height: 3rem;
+    border: none;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    background: transparent;
+}
+.add_bank_form .inputs select {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+}
+.add_bank_form button {
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(
+        to right,
+        rgba(248, 164, 66),
+        rgba(251, 118, 125)
+    );
+    color: #fff;
+    line-height: 3rem;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+.pay_center_rk .text {
+    line-height: 1.5rem;
+    font-size: 14px;
+}
+.pay_center_tips button {
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(
+        to right,
+        rgba(248, 164, 66),
+        rgba(251, 118, 125)
+    );
+    color: #fff;
+    line-height: 3rem;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+.wallet_tab {
+    width: 92%;
+    margin: 1rem 4%;
+    height: 2.5rem;
+}
+.wallet_tab ul {
+    display: flex;
+    justify-content: space-between;
+}
+.wallet_tab li {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 14px;
+    color: #999;
+    position: relative;
+}
+.wallet_tab li span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(255, 170, 0);
+    border-radius: 2px;
+    display: none;
+}
+.wallet_tab li.action {
+    color: #fff;
+    font-weight: bold;
+}
+.wallet_tab li.action span {
+    display: block;
+}
+
+.ak_main {
+    width: 94%;
+    margin: 16px 3%;
+}
+
+.ak_banner {
+    width: 100%;
+    height: 10rem;
+}
+
+.ak_navs {
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ak_navs_lis {
+    width: 48%;
+    height: 7.5rem;
+    background: linear-gradient(to top, #0049db, #003b88);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.ak_navs_lis img {
+    height: 3rem;
+}
+
+.ak_navs_lis p {
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.ak_nav {
+    width: 100%;
+    margin-top: 1rem;
+    background: linear-gradient(to right, #153692, #040521);
+    height: 4.75rem;
+    border-radius: 0.5rem;
+}
+
+.ak_nav li {
+    width: 25%;
+    float: left;
+    height: 4.75rem;
+}
+
+.ak_nav li img {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    margin: 0.5rem auto 0;
+}
+
+.ak_nav li p {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    font-size: 14px;
+}
+
+.ak_shop_list {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.ak_shop_list li {
+    width: 100%;
+    height: 5rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(to right, rgb(9, 30, 76), rgb(9, 30, 76));
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin-top: 10px;
+}
+
+.ak_shop_list li img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+}
+
+.ak_shop_list li .text {
+    width: 100%;
+    height: 5rem;
+}
+
+.ak_shop_list li .text .title {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    justify-content: flex-start;
+    line-height: 32px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.ak_shop_list li .text .title .leves {
+    width: 70px;
+    height: 20px;
+    background: url(../img/vipbg.png) no-repeat;
+    background-size: cover;
+    text-align: right;
+    padding-right: 0.3rem;
+    line-height: 20px;
+    margin-top: 6px;
+    color: #fff;
+    box-sizing: border-box;
+    font-weight: bold;
+    margin-right: 0.25rem;
+    font-size: 14px;
+}
+
+.ak_shop_list li .text p {
+    margin: 0;
+    font-size: 13px !important;
+    height: 22px;
+    line-height: 22px;
+    color: #41d3ff;
+}
+
+.ak_shop_list li a {
+    width: 4rem;
+    height: 30px;
+    display: block;
+    background-image: linear-gradient(to right, #0751ff, #003c8a);
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 0.5rem;
+    text-align: center;
+    border-radius: 50px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.qys {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    /* filter: grayscale(100%); */
+    filter: blue;
+}
+
+.ak_finance_money {
+    width: 100%;
+    height: 5.5rem;
+    background: linear-gradient(0deg, #ffffff 0%, #ffffff 100%);
+    border: 2px solid #5b3ffb;
+    border-radius: 0.5rem;
+}
+
+.ak_finance_money_top {
+    width: 100%;
+    height: 5.5rem;
+    border-bottom: 1px #5b3ffb solid;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+
+.ak_finance_money_top h4 {
+    color: #000;
+    text-align: center;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.ak_finance_money_top h2 {
+    color: #fff;
+    text-align: center;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.ak_finance_money_bot {
+    width: 50%;
+    height: 5.5rem;
+    float: left;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+
+.ak_finance_money_bot h4 {
+    color: #000;
+    text-align: center;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.ak_finance_money_bot h2 {
+    color: #fff;
+    text-align: center;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.ak_finance_money_left {
+    border-right: 1px #5b3ffb solid;
+    box-sizing: border-box;
+}
+
+.ak_finance_banner {
+    width: 100%;
+    height: 9rem;
+    margin-top: 1rem;
+}
+
+.ak_finance_banner img {
+    width: 100%;
+    height: 9rem;
+}
+
+.ak_finance_title {
+    width: 100%;
+    height: 2rem;
+    margin-top: 1rem;
+    line-height: 2rem;
+    font-size: 14px;
+    color: #fff;
+}
+
+.ak_finance_title h4 {
+    display: inline-block;
+    color: #000;
+}
+
+.ak_finance_title img {
+    float: right;
+    width: 1.8rem;
+    margin-top: 0.1rem;
+    height: 1.8rem;
+}
+
+.ak_finance_list {
+    margin-top: 1rem;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.ak_finance_list li {
+    width: 100%;
+    height: 4.5rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin-top: 15px;
+    box-shadow: 1px 1px 1px 1px #fcc53a;
+}
+
+.ak_finance_list li .income {
+    width: 5rem;
+    height: 4.5rem;
+    background-image: linear-gradient(to bottom right, #ffe393, #fcc53a);
+    border-radius: 0.5rem 0 2rem 0.5rem;
+    padding: 0.5rem 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.ak_finance_list li .income h4 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ak_finance_list li .income p {
+    margin: 0;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 12px !important;
+}
+
+.ak_finance_list li .text {
+    margin-left: 0.75rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.25rem 0;
+}
+
+.ak_finance_list li .text h4 {
+    width: 100%;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+
+.ak_finance_list li .text p {
+    margin: 0;
+    color: #000;
+    font-size: 12px !important;
+}
+
+.ak_finance_list button {
+    background: linear-gradient(0deg, #da6d42 0%, #e59840 100%);
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    border-radius: 10px;
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    top: 1.25rem;
+    right: 0.5rem;
+    font-size: 12px;
+    border: none;
+}
+
+.ak_finance_musk {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.ak_finance_popou {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: #fff;
+    padding: 0 2% 7.5rem;
+    box-sizing: border-box;
+}
+
+.ak_finance_popou .title {
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+}
+
+.ak_finance_popou_input {
+    width: 100%;
+    height: 3rem;
+    border: 1px solid #214bc0;
+    background-color: #08163c;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    position: relative;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+.ak_finance_popou_input h3 {
+    width: 1rem;
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0.75rem;
+    line-height: 3rem;
+    color: #fff;
+}
+
+.ak_finance_popou_input input {
+    width: 100%;
+    height: 3rem;
+    background: transparent;
+    border: none;
+    font-size: 14px !important;
+    padding-left: 1.5rem;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.ak_finance_popou_tips {
+    font-size: 14px;
+    color: red;
+    margin-top: 1.5rem;
+    color: #ffad41;
+}
+
+.ak_finance_popou .button {
+    width: 100%;
+    height: 3rem;
+    margin-top: 1.5rem;
+    font-size: 16px;
+    background: linear-gradient(to right, rgba(0, 73, 218), rgba(0, 59, 138));
+    color: #fff;
+    border-radius: 0.25rem;
+    border: none;
+}
+.headerback {
+    float: left;
+    text-align: left;
+    line-height: 46px;
+    width: 50%;
+}
+.topname {
+    line-height: 46px;
+    font-weight: 700;
+    width: 50%;
+    text-align: center;
+    color: #000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@media screen and (min-width: 640px) {
+    .bg {
+        left: 50%;
+        margin-left: -320px;
+    }
+    footer {
+        width: 100%;
+        max-width: 640px;
+        left: 50%;
+        margin-left: -320px;
+    }
+    #downapp {
+        width: 100%;
+        max-width: 640px;
+        left: 50% !important;
+        margin-left: -320px !important;
+    }
+    .notice_popou_musk {
+        width: 100%;
+        max-width: 640px;
+        left: 50% !important;
+        margin-left: -320px !important;
+    }
+}

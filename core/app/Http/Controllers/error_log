@@ -1,0 +1,4 @@
+[11-Jan-2025 15:14:07 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Routing\Controller' not found in /home/xsjpetiv/vrpark.com.ng/core/app/Http/Controllers/Controller.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/xsjpetiv/vrpark.com.ng/core/app/Http/Controllers/Controller.php on line 10
